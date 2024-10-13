@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myliza.com</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            user-select: none;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: rgb(20, 20, 20);
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #maindiv {
+            background-color: black;
+            width: 380px;
+            height: 470px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        #proposalp {
+            color: purple;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+        }
+
+        #proposalp2 {
+            color: purple;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        #paragraphdiv, #finalframe {
+            width: 100%;
+            height: 340px;
+            background-color: transparent;
+            color: wheat;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #paragraphdiv {
+            overflow-y: auto;
+        }
+
+        #paragraphdiv::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        #paragraphdiv::-webkit-scrollbar-thumb {
+            background-color: wheat;
+            border-radius: 5px;
+        }
+
+        #btn1, #nobtn, #yesbtn {
+            width: 100px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #btn1:hover, #nobtn:hover, #yesbtn:hover {
+            border-color: wheat;
+            color: wheat;
+        }
+
+        #nobtn:hover {
+            color: red;
+            border-color: red;
+        }
+
+        #yesbtn:hover {
+            color: green;
+            border-color: green;
+        }
+
+        #finalframe {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            #maindiv {
+                width: 90%;
+                height: auto;
+            }
+
+            #proposalp {
+                font-size: 24px;
+            }
+
+            #proposalp2 {
+                font-size: 18px;
+            }
+
+            #paragraphdiv, #finalframe {
+                height: auto;
+                max-height: 300px;
+            }
+
+            #btn1, #nobtn, #yesbtn {
+                width: 100px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="maindiv">
+        <p id="proposalp">PROPOSAL</p>
+        <div id="paragraphdiv">
+            <p id="proposalpagraph">
+                My Dearest Liza, <br> Since I have met you, my life has been better than never before. <br>
+                I am so comfortable with you, to the point where I can feel my inner Child. <br>
+                Life has never been as great, as satisfying, and as loving. <br> You are the only person
+                who can make me feel loved like that. <br> My heart pumps faster, my stomach gets butterflies, 
+                everytime I hear your beautiful voice talking. <br> Since I have laid my eyes on your beautiful, 
+                shining, mesmerizing blue grey ish eyes I have fallen in love with you so deeply. <br>
+                I really want to kiss your soft beautiful lips, and to hear you moan for more. <br> I want to 
+                go to sleep everynight, holding you, touching you, <br> cuddling with you, naked under a big cloth, <br>
+                and wake up in the morning with your messy hair, morning breath, and to hear you stretch and to kiss me 
+                good morning. <br> I truly hope that you are the one I will marry, because You are the only one
+                I ever truly wanted to marry. I hope that, our kids will have the eyes I fell in love with when I was just 16.
+                <br> I love you so so much my beautiful, tasty, delicious scrumptious Liza. <br> You are the love of my life. 
+                I promise you to be the very best husband, the very best father, and the very best bodybuilder. <br>
+                <span id="span1">Elizabete Bojaruneca, <span id="span2">Will you Marry me?</span></span>
+            </p>
+        </div>
+        <div id="finalframe">
+            <p id="proposalp2">Elizabete Bojaruneca, <br> Will you marry me?</p>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=E_qy2XYPJBo';" id="nobtn">No</button>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=nqJlNCs4qbI';" id="yesbtn">Yes</button>
+        </div>
+        <button onclick="toggledivs()" id="btn1">Next</button>
+    </div>
+
+    <script>
+        function toggledivs() {
+            var div1 = document.getElementById("paragraphdiv");
+            var div2 = document.getElementById("finalframe");
+            var btn = document.getElementById("btn1");
+            if (div1.style.display === "none") {
+                div1.style.display = "block";
+                div2.style.display = "none";
+                btn.innerHTML = "Next";
+            } else {
+                div1.style.display = "none";
+                div2.style.display = "block";
+                btn.innerHTML = "Back";
+            }
+        }
+    </script>
+</body>
+</html>
